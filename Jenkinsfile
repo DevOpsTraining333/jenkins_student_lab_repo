@@ -10,6 +10,10 @@ pipeline {
                         echo $i
                     done
                 '''
+                sh '''
+                sshpass -p 000000 ssh 192.168.56.136 -l root -t
+                systemctl status httpd
+                '''
         }
     }
 }
