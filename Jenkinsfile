@@ -11,7 +11,7 @@ pipeline {
                     done
                 '''
                 sh '''
-                sudo yum install sshpass
+                yum install sshpass
                 sshpass -p 000000 ssh 192.168.56.136 -l root 
                 systemctl status httpd
                 '''
